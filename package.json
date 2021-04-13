@@ -1,5 +1,5 @@
 {
-  "name": "xmlhttprequest-w3c",
+  "name": "@nteract/xmlhttprequest",
   "description": "W3C Compliant XMLHttpRequest for Node",
   "version": "1.8.2",
   "author": {
