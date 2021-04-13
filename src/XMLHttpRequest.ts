@@ -363,13 +363,11 @@ export class XMLHttpRequest {
       throw new InvalidStateDOMException('state is not opened');
     }
 
-    /*     if (!this.isAllowedHttpHeader(header)) {
-      throw new Error('Refused to set unsafe header "' + header + '"');
-    } */
     if (this.sendFlag) {
       throw new Error('INVALID_STATE_ERR: send flag is true');
     }
-    if (Headers.isForbidden(header)) {
+    if (!this.disableHeaderCheck && Headers.isForbidden(header)) {
+      console.warn(`Refused to set unsafe header "${header}"`);
       return;
     }
     header = this.headersCase[header.toLowerCase()] || header;
@@ -377,6 +375,18 @@ export class XMLHttpRequest {
     this.headers[header] = this.headers[header]
       ? this.headers[header] + ', ' + value
       : value;
+  }
+
+  private disableHeaderCheck: boolean = false
+  /**
+   * Disables or enables `Headers.isForbidden(header)` check in the `setRequestHeader`.
+   * The check is done by default (passing `false`).
+   * If you pass `true`, then it no longer conforms to the W3C spec.
+   *
+   * @param {boolean} state enable or disable header checking.
+   */
+  public setDisableHeaderCheck(state: boolean = false) {
+    this.disableHeaderCheck = state;
   }
 
   private setState(state: number): void {

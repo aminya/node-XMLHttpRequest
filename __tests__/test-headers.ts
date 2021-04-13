@@ -71,6 +71,7 @@ test('headers', async (done) => {
   expect('').toEqual(xhr.getRequestHeader('Content-Length'));
 
   // Test allowing all headers
+  xhr.setDisableHeaderCheck(true);
   xhr.setRequestHeader('Referer', 'http://github.com');
 
   xhr.send(undefined);
