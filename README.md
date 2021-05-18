@@ -1,5 +1,7 @@
 # node-XMLHttpRequest #
 
+W3C Compliant XMLHttpRequest for Node with added `setDisableHeaderCheck`
+
 ![actions-badge](https://github.com/drdgvhbh/node-XMLHttpRequest/workflows/CI/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/38080de9d8eda1c4e99e/maintainability)](https://codeclimate.com/github/drdgvhbh/node-XMLHttpRequest/maintainability)
 [![dependencies Status](https://david-dm.org/drdgvhbh/node-XMLHttpRequest/status.svg)](https://david-dm.org/drdgvhbh/node-XMLHttpRequest)

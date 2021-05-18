@@ -1,10 +1,10 @@
 {
-  "name": "@nteract/xmlhttprequest",
-  "description": "W3C Compliant XMLHttpRequest for Node",
+  "name": "@aminya/xmlhttprequest",
+  "description": "W3C Compliant XMLHttpRequest for Node with added setDisableHeaderCheck",
   "version": "1.8.2",
   "author": {
     "name": "Ryan Lee",
-    "url": "https://github.com/drdgvhbh/node-XMLHttpRequest"
+    "url": "https://github.com/aminya/node-XMLHttpRequest"
   },
   "keywords": [
     "xhr",
@@ -13,13 +13,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:drdgvhbh/node-XMLHttpRequest.git"
+    "url": "git@github.com:aminya/node-XMLHttpRequest.git"
   },
   "browser": {
     "fs": false,
     "child_process": false
   },
-  "bugs": "https://github.com/drdgvhbh/node-XMLHttpRequest/issues",
+  "bugs": "https://github.com/aminya/node-XMLHttpRequest/issues",
   "engines": {
     "node": ">=6"
   },
